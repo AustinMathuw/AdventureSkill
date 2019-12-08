@@ -1,0 +1,11 @@
+- kind: deployment
+  name: text
+
+- kind: api
+  name: generator
+  tensorflow:
+    model: s3://austinmatthuw/AlexaAdventure/checkpoint/run1/
+    request_handler: handler.py
+  compute:
+    cpu: 1
+    gpu: 1
